@@ -30,7 +30,7 @@ for sheet_name, df in xls.items():
         df = df.rename(columns={'Min': f'Min. {sheet_name}', 'Max': f'Max. {sheet_name}'})
     
     df.columns = list(rename_duplicates(df.columns))  # Rename duplicate columns
-    df = df.reset_index(drop=True)  # Reset the index
+
     dfs.append(df)
 
 # Concatenate all DataFrames vertically
